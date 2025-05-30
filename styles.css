@@ -115,10 +115,27 @@ body {
     /* Hace que se de la transicion en .4 seg y muestre su altura cuando se active el checkbox */
     transition: height .4s ease;
 }
+@keyframes acelerate{
+    0% {
+        transform: rotate(0deg);
+        }
+        50% {
+        transform: rotate(180deg);
+        }
+        100% {
+        transform: rotate(360deg);
+        }
+}
+.nombre{ 
+    animation: acelerate 2s forwards;
+}
 .link_nav {
     color: var(--color_blanco);
     font-size: 2.2rem;
     font-weight: bold;
+}
+.link_nav:hover{
+    color: var(--color_primario);
 }
 .article_Habilidades {
     display: flex;
@@ -164,6 +181,10 @@ body {
 .img_principal{
     width: 100%;
     display: none;
+    transition: transform 2s;
+}
+.img_principal:hover{
+    transform: scale(1.3);
 }
 /* Seccion SOBRE MI */
 .seccion_sobreMi {
