@@ -229,6 +229,8 @@ body {
 .contenedor_proyecto.i{
     grid-column: 1/6;
     justify-items: center;
+    display: grid;
+    justify-content: center;
 }
 .contenedor_proyecto.ii{
     grid-column: 1/6;
