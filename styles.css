@@ -91,7 +91,7 @@ body {
 .icono_menu {
     display: none;
 }
-/* Significa que caundo seleccionemos el menu icono, el ul links va a tomar las características que se pongan abajo, en este caso que tome su tamaño orginal para mostarar el menu */
+/* Significa que cuando seleccionemos el menu icono, el ul links va a tomar las características que se pongan abajo, en este caso que tome su tamaño orginal para mostarar el menu */
 .icono_menu:checked ~ .ul_links_nav { 
     height: 100vh;
 
@@ -125,9 +125,6 @@ body {
         100% {
         transform: rotate(360deg);
         }
-}
-.nombre{ 
-    animation: acelerate 2s forwards;
 }
 .link_nav {
     color: var(--color_terracota);
@@ -236,18 +233,10 @@ body {
 .contenedor_proyecto {
     justify-content: start;
     align-items: center;
-}
-.contenedor_proyecto.i{
     grid-column: 1/6;
     justify-items: center;
     display: grid;
     justify-content: center;
-}
-.contenedor_proyecto.ii{
-    grid-column: 1/6;
-    display: grid;
-    justify-content: center;
-    justify-items: center;
 }
 .titulos_h3 {
     text-align: center;
@@ -256,6 +245,11 @@ body {
 .img_pryecto{
     width: 100%;
     max-width: 300px;
+    transition: transform 2s;
+}
+.img_pryecto:hover{
+    color: var(--color_secundario);
+    transform: scale(0.9);
 
 }
 .p_proyecto {
