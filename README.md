@@ -1,10 +1,10 @@
 # Portafolio
 #  Information
 
-Name: Pablo Jiménez Mora
-Clan: Gosling
-Email: pablojimora@gmail.com
-ID: 1000549308
+Name: Pablo Jiménez Mora <br>
+Clan: Gosling <br>
+Email: pablojimora@gmail.com <br>
+ID: 1000549308 <b>
 
 
 # Model
