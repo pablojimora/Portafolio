@@ -2,10 +2,10 @@
 /* Se definen colores, tamaños y tamaños de fuente predeterminados para trabajar de una forma mas sencilla */
 :root {
     /* COLORES */
-    --color_primario: #00ccff;
-    --color_secundario: #c5e3ec;
-    --color_negro: #c4cecf;
-    --color_blanco: #fff;
+    --color_primario: #662e1c;
+    --color_secundario: #EBDCB2;
+    --color_beage: #C9A66B;
+    --color_terracota: #AF4425;
     /* TAMAÑOS */
     --ancho_maximo: 1600px;
     --padding_izquierda_derecha: 20px;
@@ -42,7 +42,7 @@ html {
 body {
     font-family: "Raleway", sans-serif;
     min-height: 100%;
-    background-color: var(--color_negro);
+    background-color: var(--color_beage);
 }
 
 /* ESTILOS GLOBALES COMPARTIDOS */
@@ -58,7 +58,7 @@ body {
     margin-bottom: 30px;
 }
 .titulos_h3 {
-    color: var(--color_blanco);
+    color: var(--color_terracota);
     font-size: clamp(1rem, 4vw, 1.5rem);
 }
 /* ------------NAV BAR */
@@ -130,12 +130,13 @@ body {
     animation: acelerate 2s forwards;
 }
 .link_nav {
-    color: var(--color_blanco);
+    color: var(--color_terracota);
     font-size: 2.2rem;
     font-weight: bold;
 }
 .link_nav:hover{
     color: var(--color_primario);
+
 }
 
 .icono_habilidades {
@@ -159,24 +160,29 @@ body {
 }
 .seccion_principal_h3 {
     font-size: var(--subtitulo_seccion_principal);
-    color: var(--color_blanco);
+    color: var(--color_terracota);
 }
 .seccion_principal_p {
     font-size: var(--parrafo_seccion_principal);
-    color: var(--color_blanco);
+    color: var(--color_terracota);
     margin: 15px 0;
 }
 .btn_contenedor {
     display:flex;
     justify-content: center;
-    gap: 10px;
+    gap:1rem;
 }
 .boton {
     background-color: var(--color_primario);
     font-size: 1.2rem;
     font-weight: bold;
     padding: 5px 15px;
-    color: var(--color_negro);
+    color: var(--color_beage);
+    transition: transform 2s;
+}
+.boton:hover{
+    color: var(--color_secundario);
+    transform: scale(0.9);
 }
 .img_principal{
     width: 100%;
@@ -195,7 +201,7 @@ body {
     align-items: center;
 }
 .p_sobreMi {
-    color: var(--color_blanco);
+    color: var(--color_terracota);
     text-align: center;
     margin-bottom: 30px;
 }
@@ -253,12 +259,13 @@ body {
 
 }
 .p_proyecto {
-    color: var(--color_blanco);
+    color: var(--color_terracota);
     width: 80%;
     max-width: 330px;
     text-align: center;
 }
 .footer_riwi{
+    color: var(--color_primario);
     display: grid;
     position: static;
     grid-template-columns: repeat(3 1fr);
@@ -304,7 +311,7 @@ body {
             gap: 10px;
         }
         .link_nav {
-            color: var(--color_blanco);
+            color: var(--color_terracota);
             font-size: 1.2rem;
             font-weight: bold;
         }
@@ -413,7 +420,7 @@ body {
             gap: 10px;
         }
         .link_nav {
-            color: var(--color_blanco);
+            color: var(--color_terracota);
             font-size: 2rem;
             font-weight: bold;
         }
