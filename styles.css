@@ -2,15 +2,15 @@
 /* Se definen colores, tamaños y tamaños de fuente predeterminados para trabajar de una forma mas sencilla */
 :root {
     /* COLORES */
-    --color_primario: #ff6600;
-    --color_secundario: #252525;
-    --color_negro: #000;
+    --color_primario: #00ccff;
+    --color_secundario: #c5e3ec;
+    --color_negro: #c4cecf;
     --color_blanco: #fff;
     /* TAMAÑOS */
-    --ancho_maximo: 1100px;
+    --ancho_maximo: 1600px;
     --padding_izquierda_derecha: 20px;
     --padding_arriba_abajo: 100px;
-    --altura_header: 60px;
+    --altura_header: 200px;
     /* TAMAÑOS DE FUENTE */
     --titulo_h1: clamp(1rem, 7vw, 2.6rem);
     --titulos_h2: clamp(1.2rem, 5.6vw, 2rem);
@@ -141,10 +141,17 @@ body {
 .icono_habilidades {
     width: 100px;
 }
+.icono_habilidades:hover{
+    animation: acelerate 3s forwards;
+}
 
 /* ---SECCION PRINCIPAL */
+.seccion_principal{
+    background-color: var(--color_secundario);
+}
 .seccion_principal_article {
     text-align: center;
+    
 }
 .seccion_principal_h2 {
     color: var(--color_primario);
@@ -199,17 +206,15 @@ body {
 
 
 /* Seccion Habilidades */
+.seccion_Habilidades{
+    background-color: var(--color_secundario);
 
-.article_Habilidades {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 20px;
-    justify-items: center;
-    padding: 20px;
 }
-/* Este sirve para cuando este en pantalla mobile, se ponga el icono en la segunda columna */
-.article_Habilidades_i{
-    grid-column: 2/3;
+.article_Habilidades {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Seccion Proyectos */
@@ -253,11 +258,26 @@ body {
     max-width: 330px;
     text-align: center;
 }
+.footer_riwi{
+    display: grid;
+    position: static;
+    grid-template-columns: repeat(3 1fr);
+    grid-template-rows: repeat(3 1fr);
+    gap: 10px;
+    width: min(100%,var(--ancho_maximo));
+    padding: 0 var(--padding_izquierda_derecha);
+    height: var(--altura_header);
+}
+
+.riwip{
+    grid-column: 3/3;
+    grid-row: 1/3;
+    font-size: 0.8rem;
+}
 
 
+/* Toda esta seccion es para los cambios que va a tener la pagina a la hora de estar en 768px hasta 1023px */
 
-/* Toda esta seccion es para los cambios que va a tener la pagina a la hora de estar en 768px o mas */
-/* DISPOSITIVOS ESCRITORIO */
 @media (min-width: 768px){
 
     /* Barra de navegacion */
@@ -273,7 +293,6 @@ body {
         .icono_menu {
             display: none;
         }
-        /* Significa que caundo seleccionemos el menu icono, el ul links va a tomar las características que se pongan abajo, en este caso que tome su tamaño orginal para mostarar el menu */
         .ul_links_nav {
             background-color: transparent;
             width: auto;
@@ -351,6 +370,154 @@ body {
             max-width: 350px;
 
         }
+        .footer_riwi{
+            display: flex;
+            justify-content: space-around;
+            height: 100px;
+        }
+        .riwi{
+            font-size: 3rem;
+        }
+        .riwip{
+            grid-column: 3/3;
+            grid-row: 1/3;
+            font-size: 1.5rem;
+        }
 
 }
 
+/* Toda esta seccion es para los cambios que va a tener la pagina a la hora de estar en 1024px en adelante*/
+
+@media (min-width: 1024px){
+    /* Barra de navegacion */
+        .barra_navegacion {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 auto;
+        }
+        .imagen_menu{
+            display: none;
+        }
+        .icono_menu {
+            display: none;
+        }
+        .ul_links_nav {
+            background-color: transparent;
+            width: auto;
+            height: auto;
+            position:static;
+
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+        }
+        .link_nav {
+            color: var(--color_blanco);
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        .barra_navegacion{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        /* ---SECCION PRINCIPAL */
+        .seccion_principal {
+            display: grid;
+            grid-template-columns: repeat(3 1fr);
+            grid-template-rows: repeat(3 1fr);
+
+        }
+        .seccion_principal_article {
+            grid-column: 1/4;
+            grid-row: 1/4;
+        }
+        .seccion_principal_h2{
+            font-size: 3rem;
+        }
+        .seccion_principal_h3{
+            font-size: 2.5rem;
+        }
+        .seccion_principal_p{
+            font-size: 1.5rem;
+        }
+        .btn_contenedor {
+            grid-column: 3/4;
+            margin-top: 50px;
+            gap: 10px;
+        }
+        .boton {
+            background-color: var(--color_primario);
+            font-size: 2rem;
+            padding: 10px 20px;
+    
+        }
+        .img_principal{
+            grid-column: 3/3;
+            grid-row: 2/3;
+            width: 100%;
+            display: block;
+            max-width: 1000px;
+            max-height: 500px;
+            object-fit: cover;
+            object-position: left;
+        }
+
+        /* Seccion SOBRE MI */
+        .seccion_sobreMi {
+            background-color: var(--color_secundario);
+            flex-direction: row;
+            gap: 30px;
+            justify-content: space-around;
+        }
+        .h2_sobreMi{
+            font-size: 3rem;
+        }
+        .p_sobreMi {
+            max-width: 400px;
+            font-size: 1.5rem;
+        }
+        /* SKILLS */
+        .article_Habilidades{
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            gap: 50px;
+        }
+        .h2_habilidades{
+            font-size: 3rem;
+        }
+        .icono_habilidades{
+            width: 200px;
+        }
+        /* Seccion Proyectos */
+        .seccion_proyectos{
+            background-color: var(--color_secundario);
+        }
+        .contenedor_proyectos{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            gap: 40px;    
+        }
+        .h2_proyectos{
+            font-size: 3rem;
+        }
+        .titulos_h3{
+            font-size: 2rem;
+        }
+        .p_proyecto{
+            font-size: 1rem;
+        }
+
+        .img_pryecto{
+            width: 100%;
+            max-width: 350px;
+        }
+        .footer{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+    }
