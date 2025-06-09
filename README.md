@@ -10,7 +10,7 @@ ID: 1000549308 <b>
 # Model
 ### index.html
 <p>
-This is the main structure of html of my code (home). You can find header and footer in all pages, the "header" contains the menu to navigate in the portafolio, and in the footer, you can find publicity for riwi, becasue i am a riwi coder.
+This is the main structure of html of my code (home). You can find header and footer in all pages, the "header" contains the menu to navigate in the portafolio, and in the footer, you can find publicity for riwi, because i am a riwi coder. You can also find the contact section, which I'll use through my LinkedIn link. 
 </p>
 
 ### styles.css
@@ -25,5 +25,5 @@ In the pages folder are the other HTML structures mentioned above, which are abo
 
 ### Assets folder
 <p>
-In the assets folder are the images for the entire portafolio.
+In the assets folder are the images and icons for the entire portafolio.
 </p>
