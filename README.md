@@ -28,3 +28,28 @@ In the pages folder are the other HTML structures mentioned above, which are abo
 <p>
 In the assets folder are the images and icons for the entire portafolio.
 </p>
+
+```
+└── 📁Prueba2
+    └── 📁assets
+        └── 📁images
+            └── aboutme.png
+            └── css.png
+            └── fotoportafolio.png
+            └── github.png
+            └── html.png
+            └── ICONO_COMINGSOON.png
+            └── images.jpeg
+            └── menu.jpeg
+            └── menu.png
+            └── python.png
+            └── pythonproyecto.png
+            └── reppagproy.png
+    └── 📁pages
+        └── aboutme.html
+        └── proyects.html
+        └── skills.html
+    └── index.html
+    └── README.md
+    └── styles.css
+```
